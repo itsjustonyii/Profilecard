@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Interns from './components/Interns'
+import Details from './components/Details';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='call'>
+   {Details.map((p) => (
+    <Interns id={p.id} image={p.img} name={p.name} fullname={p.fullname} power={p.power} path={p.path} gender={p.gender} attendance={p.attendance} />
+   ))}
+
+  </div>
   );
-}
+  }
 
 export default App;
